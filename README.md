@@ -1,0 +1,2 @@
+# invoice-analyzer
+solo project
