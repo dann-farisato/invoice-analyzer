@@ -1,1 +1,151 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    /* background: linear-gradient(90deg, #00C9FF 0%, #000082 100%); */
+    font-family: 'Quicksand',
+        sans-serif;
+    color: rgb(97, 99, 104);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #474aa9, #6c9beb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.547), rgba(255, 255, 255, 0.28));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+.image {
+    width: 75px;
+    height: 50px;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.869), rgba(255, 255, 255, 0.28));
+    border-radius: 2rem 0 0 2rem;
+    padding: 25px;
+}
+
+.link {
+    display: flex;
+    margin: 2rem, 0rem;
+    padding: 1rem, 5rem;
+    align-items: center;
+}
+
+.link h2 {
+    text-decoration: none;
+    padding: 0rem 2rem;
+}
+
+.games {
+    flex: 2;
+}
+
+.pro {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+h2 {
+    color: #3e6c71;
+
+}
+
+.status {
+    margin-bottom: 3rem;
+}
+
+.status input {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.869), rgba(255, 255, 255, 0.28));
+    border: none;
+    width: 40%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to left top, rgb(255, 255, 255), rgba(255, 255, 255, 0.882));
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.753);
+    justify-content: space-between;
+}
+
+.progress {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    width: 100%;
+    height: 30%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+}
+
+/* .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
