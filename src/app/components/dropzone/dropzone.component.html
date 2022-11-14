@@ -10,24 +10,28 @@
                             <!-- <input type="file" id="file"> -->
                             <!-- <input type="file" id="file" (change)="handleFileInput($event.target)"> -->
                             <div class="text-center" *ngIf="!file">
-                                <input class="form-control" type="file" (change)="onChange($event)">
+                                <input class="form-control" type="file" (change)="onChange($event)" name="fileX">
+                            </div>
+                            
+                            <div *ngIf="file">
+                                filename: {{file.name}} <br>
                                 <button (click)="onUpload()" class="btn btn-success">Upload</button>
-
-                                <div *ngIf="file">
-                                    filename: {{file.name}} <br>
+                            </div>
+                                <div>
+                                    <br>
+                                    <!-- <progress [value]="percentage" max="100"></progress> {{ percentage }} -->
                                 </div>
-    <!-- Shareable short link of  uploaded file -->
-                                <!-- <div class=""
+    <!--Shareable short link of  uploaded file -->
+                                <div class=""
                                     *ngIf="shortLink">
                                     <h2> Visit Here</h2>
                                     <a href="{{shortLink}}">{{shortLink}}</a>
                                 </div>
-   -->
+  
 <!--Flag variable is used here-->
-                                <!-- <div class="container" *ngIf="loading">
+                                <div class="container" *ngIf="loading">
                                     <h3>Loading ...</h3>
-                                </div> -->
-                            </div>
+                                </div>
                         </div>
                     </div>
         </div>

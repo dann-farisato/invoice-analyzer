@@ -144,8 +144,6 @@ h2 {
     left: 60%;
 }
 
-/* .card-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} */
+a{
+    text-decoration: none;
+}
