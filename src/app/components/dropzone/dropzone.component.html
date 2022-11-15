@@ -5,32 +5,47 @@
     <div class="card">
         <div class="card-info">
                     <div class="form-group">
-                        <!-- <label for="file">Choose File</label> -->
                         <div class="file-input">
-                            <!-- <input type="file" id="file"> -->
-                            <!-- <input type="file" id="file" (change)="handleFileInput($event.target)"> -->
                             <div class="text-center" *ngIf="!file">
-                                <input class="form-control" type="file" (change)="onChange($event)" name="fileX">
+                                <input class="form-control btn" type="file" (change)="onChange($event)" name="fileX">
                             </div>
                             
-                            <div *ngIf="file">
-                                filename: {{file.name}} <br>
-                                <button (click)="onUpload()" class="btn btn-success">Upload</button>
+                            <div class="upForm" *ngIf="file">
+                                <h4>
+                                    filename: {{file.name}} 
+                                </h4>
+                                <br>
+                                <br>
+                                <button (click)="onUpload()" class="btn">Upload</button>
                             </div>
-                                <div>
-                                    <br>
-                                    <!-- <progress [value]="percentage" max="100"></progress> {{ percentage }} -->
-                                </div>
-    <!--Shareable short link of  uploaded file -->
-                                <div class=""
-                                    *ngIf="shortLink">
-                                    <h2> Visit Here</h2>
-                                    <a href="{{shortLink}}">{{shortLink}}</a>
-                                </div>
-  
-<!--Flag variable is used here-->
-                                <div class="container" *ngIf="loading">
-                                    <h3>Loading ...</h3>
+                            <div>
+                                <br>
+                                <progress [value]="progressBar" max="1"></progress> 
+                                <br>
+                            </div>
+                                <div class="container">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>PRODUCT</th>
+                                                <th>HS CODE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr >
+                                                <td> 
+                                                    <ul>
+                                                        <li *ngFor="let product of products"> {{product}}</li>
+                                                    </ul> 
+                                                </td>
+                                                <td> 
+                                                    <ul>
+                                                        <li *ngFor="let code of prodResult"> {{code}}</li>
+                                                     </ul> 
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                         </div>
                     </div>

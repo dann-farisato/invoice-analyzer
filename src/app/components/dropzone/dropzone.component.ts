@@ -16,18 +16,12 @@ export class DropzoneComponent implements OnInit {
   loading: boolean = false; // Flag variable
   percentage!: Observable<number>;
   products: string[] = [];
-
+  prodResult: string[] = [];
+  progressBar!: number;
   constructor(private productService: FileUploadService) { }
 
   ngOnInit(): void {
-    // Tesseract
-    //   .recognize(this.file)
-    //   .progress(console.log)
-    //   .then((res: any) => {
-    //     console.log(res.text);
-    //     this.result = res.text;
-    //   })
-    //   .catch(console.error);
+
   }
   onChange(event: any) {
     this.file = event.target.files[0];
@@ -39,20 +33,19 @@ export class DropzoneComponent implements OnInit {
     // this.http.post('http://localhost:3007/upload', formData).subscribe((response) => { console.log(response) });
     Tesseract
       .recognize(this.file)
-      .progress(console.log)
+      .progress((data) => this.progressBar = data.progress)
       .then((res: any) => {
         console.log(res.text);
         this.result = res.text;
         this.products = detectProducts(res.text)
         console.log('products : ', this.products)
-        this.productService.postProducts(this.products).subscribe(data => console.log(data));
+        this.productService.postProducts(this.products).subscribe(data => {
+          console.log(this.prodResult);
+          this.prodResult = data;
+
+        });
       })
       .catch(console.error);
   }
-  // searchDescrition(desc: string) {
-  //   let searchWeb = this.result.split(' ');
-  //   console.log(searchWeb);
-  // }
-
 
 }
