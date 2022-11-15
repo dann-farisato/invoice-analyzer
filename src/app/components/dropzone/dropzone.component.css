@@ -1,8 +1,8 @@
-/* .upForm{
+.upForm{
     display: flex;
     flex-direction: column;
     align-items: center;
-} */
+}
 .card{
     display: flex;
     flex-direction: column;
