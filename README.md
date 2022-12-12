@@ -1,5 +1,7 @@
 # InvoiceApp
 
+<img width="1160" alt="Screenshot 2022-12-12 at 15 31 20" src="https://user-images.githubusercontent.com/109671001/207071295-d7616a30-da77-48eb-bd06-fa2e5e9717d7.png">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 ## Development server
@@ -22,6 +24,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
